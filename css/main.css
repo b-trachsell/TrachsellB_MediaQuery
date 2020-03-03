@@ -10,9 +10,13 @@ body {
   flex-wrap: nowrap;;
   max-width: 1140px;
   height: 100vh;
+
 }
 
 .column {
+  display: flex;
+  flex-direction: column;
+ align-items: center;
   flex: 1 1 200px;
   background-color: #8ea86e;
   color: #fff;
@@ -42,7 +46,6 @@ body {
     flex-direction: row;
     justify-content: space-between;
     flex-wrap: nowrap;
-    height: screen;
   }
 
   .column1{
@@ -66,16 +69,32 @@ body {
     background-color: grey;
   }
 }
+
 @media screen and (min-width: 841px){
  .container{
     background-color:black;
-
  }
+
+
  .column{
-  background-color: green;
-  color:red;
-  flex-grow:0;
+    background-color: green;
+    color:red;
+    flex-grow:0;
  }
 
+ h2{
+  animation: 1s ease-in infinite alternate fullWidthFun 
+ }
+
+
+
+@keyframes fullWidthFun{
+  from {
+    transform: translate(0px, 0px);
+  }
+  to{
+    transform: translate(0px, 500px);
+  }
+}
 
  }
